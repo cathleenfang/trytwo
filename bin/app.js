@@ -3,12 +3,12 @@
 const koa = require('koa'),
       path = require('path'),
       serve = require('koa-static'),
-      router = require('./routes/router'),
+      router = require('../routes/router'),
       Pug = require('koa-pug');
 
 const app = koa();
 
-const devPath = path.resolve(__dirname, './dev');
+const devPath = path.resolve(__dirname, '../dev');
 
 // view engine
 const pug = new Pug({
