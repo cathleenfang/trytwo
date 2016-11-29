@@ -15,6 +15,7 @@ const pug = new Pug({
   viewPath: './dev/pugs',
   basedir: './dev/pugs',
   debug: app.env !== 'production',
+  noCache: app.env !== 'production',
   locals: {
     development: app.env === 'development',
     production: app.env === 'production'

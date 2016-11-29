@@ -4,7 +4,7 @@
   "description": "2016-11-24 build a project",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development nodemon bin/app.js",
+    "start": "NODE_ENV=development nodemon --ignore dev/ bin/app.js",
     "test": "make test"
   },
   "repository": {
@@ -18,12 +18,17 @@
   },
   "homepage": "https://github.com/cathleenfang/trytwo#readme",
   "devDependencies": {
-    "koa": "^1.2.4"
+    "koa": "^1.2.4",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-each": "^0.9.3",
+    "postcss-short": "^2.0.1"
   },
   "dependencies": {
     "koa-pug": "^3.0.0-1",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "postcss": "^5.2.6",
+    "precss": "^1.4.0"
   }
 }

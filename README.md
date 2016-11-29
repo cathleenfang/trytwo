@@ -7,3 +7,5 @@ rebuild a project for web study
 5、require（‘path’） nodejs的path对象 设置静态文件路径
 6、npm install koa-router /koa-static 配置路由 
 7、npm nodemon -g 用于自动刷新代码 package.json的script里面配置start
+8、npm install gulp gulp-postcss postcss precss  用于编译postcss
+9、创建cssInterceptor用于转pcss为css
