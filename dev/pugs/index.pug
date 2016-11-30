@@ -1,12 +1,9 @@
-doctype html
-html(lang='zh-CN')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(http-equiv='content-language' content='zh-CN')
-    title fang's blog
-    link(rel='stylesheet' href='/css/index/index.css' type='text/css')
-  body
+extends layout/layout
+
+block head 
+  link(href='/css/index/index.css' type='text/css' rel='stylesheet')
+
+block body
     .header
       h1 minimo
       ul.navlist
