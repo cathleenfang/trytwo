@@ -5,6 +5,7 @@ const koa = require('koa'),
       serve = require('koa-static'),
       router = require('../routes/router'),
       Pug = require('koa-pug');
+const cssInterceptor = require('./cssInterceptor');
 
 const app = koa();
 
@@ -25,6 +26,9 @@ const pug = new Pug({
 
 //static
 app.use(serve(devPath));
+
+// postcss
+app.use(cssInterceptor(devPath));
 
 //router
 app.use(router.routes());

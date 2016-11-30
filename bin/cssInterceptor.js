@@ -3,6 +3,34 @@
 const path = require('path');
 const fs = require('fs');
 const precss = require('precss');
+const postcss = require('postcss');
+const postcsseach = require('postcss-each');
+const postcssshort = require('postcss-short');
+const cssnext = require('postcss-cssnext');
+
+module.exports = intercept;
+
+function intercept(staticDir) {
+    return function *(next) {
+        var pathname, pcssFilePath;
+        pathname = this.request.path;
+
+        if (!/\.css$/.test(pathname)) {
+            return yield next;
+        }
+
+        pcssFilePath = path.join(staticDir, pathname.replace(/\.css/, '.pcss'));
+
+        if (fs.existsSync(pcssFilePath)) {
+            var result = yield cssRender(pcssFilePath);
+            this.set('Content-Type', 'text/css');
+            this.body = result.css;
+            return yield next;
+        } else {
+            return yield next;
+        }
+    };
+}
 
 function cssRender(pcssFilePath) {
     var css = fs.readFileSync(pcssFilePath);
