@@ -9,7 +9,9 @@ rebuild a project for web study
 7、npm nodemon -g 用于自动刷新代码 package.json的script里面配置start
 8、app.js设置pug为渲染引擎 设置pug相应参数 noCache参数需要设置才能成功让页面自动更新
 9、创建cssInterceptor.js用于转pcss为css 
-10、安装常用的postcss插件：postcss-cssnext，postcss-short，postcss-each，precss
+10、安装常用的postcss插件：postcss-cssnext，postcss-short，postcss-each，precss 确定在app.js添加pcss处理代码
+11、下载添加normal.css  依据项目需求  设置layout存放共同的部分
+12、modules存放经常使用的属性 通过采用@mixin进行调用
 
 
 
@@ -17,3 +19,4 @@ rebuild a project for web study
 1、dev里面内容的改变  并不需要通过nodemon监听变化 
 2、package.json里面的dependencies和devDependencies的区别：devDependencies是开发过程中需要的依赖包，dependencies是生产环境需要的依赖包
 3、项目采用pcss进行编译是因为用的viscode软件对pcss格式的文件有显示高亮作用  因此项目中需要将pcss格式转换为css
+4、路径填写准确很重要

@@ -1,0 +1,42 @@
+@define-mixin fl {
+    float: left;
+}
+
+@define-mixin fr {
+    float: right;
+}
+
+@define-mixin clearfix {
+    *zoom: 1;
+    &:after {
+        content: '\20';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+@define-mixin re {
+    position: relative;
+}
+
+@define-mixin ab {
+    position: absolute;
+}
+
+@define-mixin fixed {
+    position: fixed;
+}
+
+@define-mixin dl {
+    display: block;
+}
+
+@define-mixin dn {
+    display: none;
+}
+
+@define-mixin wrap1200 {
+    width: 1062px;
+    margin: 0 auto;
+}

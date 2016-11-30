@@ -1,4 +1,85 @@
-.header {
+@import "../lib/modules.pcss";
+@import "../lib/normal.pcss";
+
+.main-block {
+    @mixin wrap1200;
+    margin-top: 30px;
+}
+
+.page1-1 {
+    @mixin dl;
     margin: 0 auto;
-    width: 980px;
+    width: 1062px;
+    height: 527px;
+    background-image: url(../../images/index/icon/page1-1.png);
+}
+
+.page-block {
+    margin: 60px auto 0;
+    width: 1000px;
+    a {
+        font-size: 14px;
+        line-height: 48px;
+        text-decoration: none;
+    }
+    h1 {
+        padding: 10px 0;
+        font-size: 30px;
+        line-height: 60px;
+    }
+    p {
+        height: 200px;
+        font-size: 14px;
+        line-height: 18px;
+        overflow: hidden;
+    }
+}
+
+.page-next {
+    margin: 60px auto 0;
+    width: 1000px;
+    @mixin clearfix;
+    p {
+        width: 400px;
+        height: 200px;
+        overflow: hidden;
+    }
+}
+
+.next-left {
+    width: 500px;
+    @mixin fl;
+}
+
+.next-right {
+    width: 500px;
+    @mixin fr;
+}
+
+.page2-1 {
+    @mixin dl;
+    width: 469px;
+    height: 307px;
+    background-image: url(../../images/index/icon/page2-1.png);
+}
+
+.page3-1 {
+    @mixin dl;
+    width: 422px;
+    height: 304px;
+    background-image: url(../../images/index/icon/page3-1.png);
+}
+
+.page4-1 {
+    @mixin dl;
+    width: 422px;
+    height: 304px;
+    background-image: url(../../images/index/icon/page4-1.png);
+}
+
+.page5-1 {
+    @mixin dl;
+    width: 420px;
+    height: 298px;
+    background-image: url(../../images/index/icon/page5-1.png);
 }
