@@ -6,4 +6,7 @@ router.get('/', function *() {
     this.render('index');
 });
 
+router.get('/full', function *() {
+    this.render('full');
+});
 module.exports = router;
