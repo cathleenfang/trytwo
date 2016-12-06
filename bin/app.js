@@ -6,6 +6,7 @@ const koa = require('koa'),
       router = require('../routes/router'),
       Pug = require('koa-pug');
 const cssInterceptor = require('./cssInterceptor');
+const bodyParser = require('./bodyParser');
 
 const app = koa();
 
@@ -32,5 +33,7 @@ app.use(cssInterceptor(devPath));
 
 //router
 app.use(router.routes());
+
+app.use(bodyParser);
 
 app.listen(8080);
