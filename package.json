@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon --ignore dev/ bin/app.js",
+    "css:sprites": "node build/css-sprite",
     "test": "make test"
   },
   "repository": {
@@ -24,11 +25,14 @@
     "postcss-short": "^2.0.1"
   },
   "dependencies": {
+    "async": "^2.1.4",
+    "glob": "^7.1.1",
     "koa-pug": "^3.0.0-1",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "nodemon": "^1.11.0",
     "postcss": "^5.2.6",
-    "precss": "^1.4.0"
+    "precss": "^1.4.0",
+    "spritesmith": "^3.1.0"
   }
 }
