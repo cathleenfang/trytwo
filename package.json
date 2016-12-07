@@ -6,7 +6,9 @@
   "scripts": {
     "start": "NODE_ENV=development nodemon --ignore dev/ bin/app.js",
     "css:sprites": "node build/css-sprite",
-    "test": "make test"
+    "test": "npm run test:puglint",
+    "test:puglint": "pug-lint dev/pugs/*",
+    "test:stylelint": "stylelint dev/css/**/*.pcss !dev/css/lib/normal.pcss"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,8 @@
     "nodemon": "^1.11.0",
     "postcss": "^5.2.6",
     "precss": "^1.4.0",
-    "spritesmith": "^3.1.0"
+    "pug-lint": "^2.3.0",
+    "spritesmith": "^3.1.0",
+    "stylelint": "^7.6.0"
   }
 }
