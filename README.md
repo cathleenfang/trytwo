@@ -24,3 +24,4 @@ rebuild a project for web study
 2、package.json里面的dependencies和devDependencies的区别：devDependencies是开发过程中需要的依赖包，dependencies是生产环境需要的依赖包
 3、项目采用pcss进行编译是因为用的viscode软件对pcss格式的文件有显示高亮作用  因此项目中需要将pcss格式转换为css
 4、路径填写准确很重要
+5、npm scripts 继发执行（即只有前一个任务成功，才执行下一个任务），使用&&符号；并行执行（即同时的平行执行），使用&符号
