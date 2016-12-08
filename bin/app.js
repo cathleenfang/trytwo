@@ -7,6 +7,9 @@ const koa = require('koa'),
       Pug = require('koa-pug');
 const cssInterceptor = require('./cssInterceptor');
 const bodyParser = require('./bodyParser');
+const webpack = require('webpack');
+const webpackMiddleware = require('koa-webpack-dev-middleware');
+const webpackConfig = require('../webpack.config');
 
 const app = koa();
 
@@ -35,5 +38,13 @@ app.use(cssInterceptor(devPath));
 app.use(router.routes());
 
 app.use(bodyParser);
+
+// js(webpack)
+app.use(webpackMiddleware(webpack(webpackConfig), {
+    publicPath: '/script/',
+    stats: {
+        colors: true
+    }
+}));
 
 app.listen(8080);
