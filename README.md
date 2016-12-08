@@ -12,9 +12,9 @@ rebuild a project for web study
 10、安装常用的postcss插件：postcss-cssnext，postcss-short，postcss-each，precss 确定在app.js添加pcss处理代码
 11、下载添加normal.css  依据项目需求  设置layout存放共同的部分
 12、modules存放经常使用的属性 通过采用@mixin进行调用
-13、pug-lint用于检查pug代码的格式 stylelint用于检查css的格式 eslint用于检查js代码格式 
+13、pug-lint用于检查pug代码的格式 stylelint用于检查css的格式 eslint用于检查js代码格式  不需要配置路径问题  直接按照文档设置文件格式和名称即可
 14、设置.pug-lint.json 里面定义pug规则
-15、
+15、创建.stylelinttrc 定义css规则  
 
 
 
