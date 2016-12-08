@@ -14,4 +14,16 @@ router.get('/lifestyle', function *() {
     this.render('lifestyle');
 });
 
+router.get('/photodiary', function *() {
+    this.render('photodiary');
+});
+
+router.get('/music', function *() {
+    this.render('music');
+});
+
+router.get('/travel', function *() {
+    this.render('travel');
+});
+
 module.exports = router;

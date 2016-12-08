@@ -17,10 +17,6 @@
 .page-block {
   margin: 60px auto 0;
   width: 1000px;
-  a {
-    font-size: 14px;
-    text-decoration: none;
-  }
   p {
     margin: 10px 0;
     height: 200px;
@@ -50,8 +46,19 @@
 }
 
 .tips {
+  margin: 10px 0;
+  @mixin clearfix;
   display: block;
-  padding: 10px 0;
+  font-size: 16px;
+  line-height: 32px;
+  .photodiaryicon {
+    margin-right: 5px;
+    @mixin fl;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../../images/index/icon/photodiary.png);
+  }
 }
 
 .page2-1 {

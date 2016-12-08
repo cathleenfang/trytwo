@@ -3,8 +3,9 @@
 .wrap {
   @mixin wrap1200;
   @mixin clearfix;
-  h1 {
+  .gw {
     @mixin fl;
+    display: block;
     line-height: 60px;
     font-size: 30px;
   }
@@ -12,15 +13,17 @@
 
 .navlist {
   @mixin fr;
-  margin: 20px;
   li {
     @mixin fl;
-    padding-left: 100px;
-    line-height: 60px;
+    margin-left: 100px;
+    border-bottom: 4px solid #fff;
     a {
       font-size: 14px;
       color: #000;
-      text-decoration: none;
+      line-height: 60px;
+    }
+    &:hover {
+      border-bottom: 4px solid #505050;
     }
   }
 }
